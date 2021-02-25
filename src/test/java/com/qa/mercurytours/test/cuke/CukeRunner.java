@@ -8,7 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/resources/cuke",
-		glue = "com.qa.mercurytours.test.cuke.stepdefs")
+		glue = "com.qa.mercurytours.test.cuke.stepdefs",
+		plugin = {"pretty", "html:target/reports/cuke/mercuryTools_report.html"},
+		monochrome = true)
 public class CukeRunner {
 
 }
